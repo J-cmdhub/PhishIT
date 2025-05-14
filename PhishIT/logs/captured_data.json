@@ -1,0 +1,67 @@
+[
+    {
+        "username": "user01",
+        "password": "password",
+        "device": {
+            "browser": "Chrome",
+            "os": "Windows",
+            "device": "Other",
+            "is_mobile": false,
+            "is_tablet": false,
+            "is_pc": true
+        },
+        "template": "facebook"
+    },
+    {
+        "username": "user02",
+        "password": "password",
+        "device": {
+            "browser": "Chrome",
+            "os": "Windows",
+            "device": "Other",
+            "is_mobile": false,
+            "is_tablet": false,
+            "is_pc": true
+        },
+        "template": "facebook"
+    },
+    {
+        "username": "adim",
+        "password": "password",
+        "device": {
+            "browser": "Chrome",
+            "os": "Windows",
+            "device": "Other",
+            "is_mobile": false,
+            "is_tablet": false,
+            "is_pc": true
+        },
+        "template": "facebook"
+    },
+    {
+        "username": "user01",
+        "password": "passqowe",
+        "device": {
+            "browser": "Chrome",
+            "os": "Windows",
+            "device": "Other",
+            "is_mobile": false,
+            "is_tablet": false,
+            "is_pc": true
+        },
+        "template": "facebook"
+    },
+    {
+        "username": "ty",
+        "password": "hjuihu",
+        "device": {
+            "browser": "Chrome",
+            "os": "Windows",
+            "device": "Other",
+            "is_mobile": false,
+            "is_tablet": false,
+            "is_pc": true
+        },
+        "template": "facebook"
+    }
+]
